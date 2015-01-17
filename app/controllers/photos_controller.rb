@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all
+    @photos = Photo.page params[:page]
   end
 
   # GET /photos/1
@@ -63,7 +63,8 @@ class PhotosController < ApplicationController
 
   def search
     @q = Photo.ransack(params[:q])
-    @photos = @q.result
+    # @photos = @q.result.near([31.2, 121.5], 20, units: :km).page params[:page]
+    @photos = @q.result.page params[:page]
   end
 
   private
@@ -74,8 +75,9 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:url, :location, :tag, :exif, :name,
-                                    :longitude, :latitude, :taken_at, :author,
-                                    :author_url)
+      params.require(:photo).permit!
+      # params.require(:photo).permit(:url, :location, :tag, :exif, :name,
+      #                               :longitude, :latitude, :taken_at, :author,
+      #                               :author_url)
     end
 end
