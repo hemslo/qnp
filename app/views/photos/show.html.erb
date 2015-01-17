@@ -20,5 +20,35 @@
   <%= @photo.exif %>
 </p>
 
+<p>
+  <strong>Name:</strong>
+  <%= @photo.name %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @photo.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @photo.latitude %>
+</p>
+
+<p>
+  <strong>TakenAt:</strong>
+  <%= @photo.taken_at %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @photo.author %>
+</p>
+
+<p>
+  <strong>AuthorUrl:</strong>
+  <%= @photo.author_url %>
+</p>
+
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

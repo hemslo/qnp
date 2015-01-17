@@ -27,6 +27,30 @@
     <%= f.label :exif %><br>
     <%= f.text_field :exif %>
   </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.number_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.number_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :taken_at %><br>
+    <%= f.datetime_field :taken_at %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :author_url %><br>
+    <%= f.url_field :author_url %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

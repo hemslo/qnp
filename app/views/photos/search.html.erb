@@ -31,6 +31,12 @@
       <td><%= photo.location %></td>
       <td><%= photo.tag %></td>
       <td><%= photo.exif %></td>
+      <td><%= photo.name %></td>
+      <td><%= photo.longitude %></td>
+      <td><%= photo.latitude %></td>
+      <td><%= photo.taken_at %></td>
+      <td><%= photo.author %></td>
+      <td><%= photo.author_url %></td>
       <td><%= link_to 'Show', photo %></td>
       <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
       <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
