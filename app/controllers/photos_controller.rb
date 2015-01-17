@@ -61,6 +61,11 @@ class PhotosController < ApplicationController
     end
   end
 
+  def search
+    @q = Photo.ransack(params[:q])
+    @photos = @q.result
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_photo
