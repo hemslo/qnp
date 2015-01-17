@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117052216) do
+ActiveRecord::Schema.define(version: 20150117070523) do
 
   create_table "photos", force: :cascade do |t|
     t.string   "url"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20150117052216) do
     t.string   "exif"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.datetime "taken_at"
+    t.string   "author"
+    t.string   "author_url"
   end
 
 end
