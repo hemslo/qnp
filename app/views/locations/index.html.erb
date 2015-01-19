@@ -1,0 +1,52 @@
+<div class="content">
+  <div class="search">
+    <div class="col-lg-5">
+      <div class="input-group">
+        <%= search_form_for @q, url: home_index_path do |f| %>
+        <%= f.search_field :location_cont, class: 'form-control' %>
+
+        <%= f.submit class:'btn btn-default' %>
+        <% end %>
+      </div><!-- /input-group -->
+    </div>
+  </div>
+
+  <div class="locations">
+    <div class="section">
+      <div class="section-title">
+        搜索历史
+      </div>
+      <div class="section-list"> #开发中# </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title"> 热门搜索 </div>
+      <div class="section-list">
+        <a href="/home"> #Taiwan# </a>
+      </div>
+      <div class="section-list">
+        <a href="/home"> #Japan# </a>
+      </div>
+      <div class="section-list">
+        <a href="/home"> #Spain# </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="active">
+      <a href="home"> <%=image_tag("home_icon.png", height: 33)%></a>
+    </li>
+    <li>
+      <a href="#"> <%=image_tag("地理.png", height: 33)%></a>
+    </li>
+    <li>
+      <a href="tags"> <%=image_tag("标签icon.png", height: 33)%></a>
+    </li>
+    <li>
+      <a href="profile"> <%=image_tag("自己icon.png", height: 33)%></a>
+    </li>
+  </ul>
+</div>

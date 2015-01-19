@@ -1,0 +1,33 @@
+body{
+  margin: 20px 230px !important;
+  width: 512px;
+  height: 900px;
+  border: 1px solid !important;
+}
+.content{
+  height: 800px;
+  max-height: 800px;
+  min-height: 800px;
+  overflow: scroll;
+}
+
+.search{
+  margin: 20px
+}
+
+a:hover{
+  background: none !important;
+}
+
+.footer{
+  margin-top: 20px;
+  margin-left: 120px;
+  .nav-tabs{
+    border: none !important;
+    li{
+      a{
+        border: none !important;
+      }
+    }
+  }
+}

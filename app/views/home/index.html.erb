@@ -1,0 +1,37 @@
+<div class="content">
+  <div class="pics" style='margin: 0 50px'>
+    <% @photos.each do |photo| %>
+    <div class="photo" style="display: inline-block; margin: 20px;">
+      <%= link_to( image_tag(photo.url), photo_path(photo)) %>
+      <div class="info">
+        <%= image_tag("收藏1.png", width: 16) %>
+        <%= photo.name[0..5] %>
+        <div class="pull-right">
+          <%= image_tag("地理.png", width: 13) %>
+          <%= photo.longitude.to_s[0..5] %>
+        </div>
+
+      </div>
+    </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="footer">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="active">
+      <a href="home"> <%=image_tag("home_icon.png", height: 33)%></a>
+    </li>
+    <li>
+      <a href="locations"> <%=image_tag("地理.png", height: 33)%></a>
+    </li>
+    <li>
+      <a href="tags"> <%=image_tag("标签icon.png", height: 33)%></a>
+    </li>
+    <li>
+      <a href="profile"> <%=image_tag("自己icon.png", height: 33)%></a>
+    </li>
+  </ul>
+</div>
